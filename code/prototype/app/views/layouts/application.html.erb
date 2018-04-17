@@ -2,13 +2,24 @@
 <html>
   <head>
     <title>Prototype</title>
-    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= csrf_meta_tags %>  
+</head>
 
   <body>
+
+<div class="container">
+
+        <ul class="nav nav-tabs">
+                <li><%= link_to "Home", root_path %> </li>
+                <li><%= link_to "Feedback", welcome_addfeedback_path %></li>
+                <li><%= link_to "Administrator", welcome_admin_path %></li>
+                <li style="float: right;"><%= link_to "Have an account? Login", welcome_login_path %></li>
+        </ul>
     <%= yield %>
+</div>
   </body>
 </html>
+
