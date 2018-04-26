@@ -1,0 +1,13 @@
+<body>
+
+        <% if user_signed_in? %>
+	<p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
+
+        <% else %>
+
+        <%= link_to "Sign In", new_user_session_path %>
+        <%= link_to "Register", new_user_registration_path %>
+        <% end %>
+</body>
+        <h1>WELCOME TO FOOD WASTE AWARENESS WEBSITE ORGANIZATION!</h1>
+        <h1>CLICK ON ORGANIZATION ICON TO VIEW FEEDBACKS FROM USERS</h1>

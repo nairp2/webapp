@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prototype</title>
+
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= csrf_meta_tags %>  
+  
+  </head>
+
+
+  <body>
+
+<nav class="navbar navbar-inverse" role="navigation">
+ <div class="container">
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+   </button>
+
+      <a class="navbar-brand" href="#">Food Waste Awareness</a>
+    </div>
+  <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/pages/Home">Home</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/feedbacks/new">Feedback</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/feedbacks">Administrator</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/feedbacks">Organization</a></li>
+        </ul>
+
+
+     <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/pages/Home" id="dropdown01" data-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+
+ <div class="dropdown-menu" aria-labelledby="dropdown01">
+
+         <ul><a class="dropdown-item" href="/pages/Login_user">User</a></ul>
+         <ul><a class="dropdown-item" href="/pages/Login_org">Organization</a></ul>
+           </div>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+
+        <div class="container">
+
+        <%= yield %>
+        </div>
+      <%= render 'layouts/footer' %>
+    </body>
+</html>
+

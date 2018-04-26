@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food Order:</strong>
+  <%= @feedback.title %>
+</p>
+
+<p>
+  <strong>Waste Amount:</strong>
+  <%= @feedback.content %>
+</p>
+
+
+<h2>Email to restaurant</h2>
+
+<%= render @feedback.comments %> <!-- render = partial -->
+
+<br>
+
+<%= render "comments/form" %>
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
