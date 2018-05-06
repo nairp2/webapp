@@ -1,3 +1,7 @@
+=begin
+Filename: feedback_mailer.rb
+Description: This mailer contails details that is sent to each slot in an actualcompose of email.
+=end
 class FeedbackMailer < ActionMailer::Base
 
 	def feedback_created(user)

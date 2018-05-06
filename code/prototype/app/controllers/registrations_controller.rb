@@ -1,3 +1,7 @@
+=begin
+Filename: registrations_controller.rb
+Description: This file contains methods for sign up and account update for ufser and organization.
+=end
 class RegistrationsController < Devise::RegistrationsController
 
 	private

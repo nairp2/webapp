@@ -1,3 +1,4 @@
+<!-- This displays the form for user feedback which is sent to the database-->
 <%= form_for(feedback) do |f| %>
   <% if feedback.errors.any? %>
     <div id="error_explanation">
@@ -12,16 +13,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %>
+    <%= f.label :food_order %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :feedback_details %>
     <%= f.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit({:class => 'btn btn-mini btn-primary btn-lg'}) %>
   </div>
 <% end %>

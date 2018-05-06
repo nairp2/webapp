@@ -1,3 +1,7 @@
+=begin
+Filename: comment_mailer.rb
+Description: This mailer consists of instance variables for sending an email
+=end
 class CommentMailer < ActionMailer::Base
 
         def comment_created(current_user, feedback_user, content)

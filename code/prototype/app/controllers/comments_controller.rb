@@ -1,3 +1,7 @@
+=begin
+FIlename: comments_controller.rb
+Description: This file is the comments controller for the organization to receive user feedbacks and send suggestions to the restaurant via email.
+=end
 class CommentsController < ApplicationController
 
 	def create

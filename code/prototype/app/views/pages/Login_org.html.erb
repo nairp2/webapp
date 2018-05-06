@@ -1,3 +1,24 @@
+<head>
+        <style type= "text/css">
+
+                body {
+                        margin: 0;
+                        padding: 0;
+
+                     }
+                h1 {
+                        font-size: 3em;
+                        text-align: center;
+                        margin: 0;
+                        padding: 0;
+                        top: 50%;
+                        left: 50%;
+                        position: absolute;
+                        transform: translateX(-50%) translateY(-50%);
+                   }
+        </style>
+</head>
+
 <body>
 
         <% if user_signed_in? %>
@@ -9,5 +30,5 @@
         <%= link_to "Register", new_user_registration_path %>
         <% end %>
 </body>
-        <h1>WELCOME TO FOOD WASTE AWARENESS WEBSITE ORGANIZATION!</h1>
-        <h1>CLICK ON ORGANIZATION ICON TO VIEW FEEDBACKS FROM USERS</h1>
+        <h1>WELCOME TO FOOD WASTE AWARENESS WEBSITE ORGANIZATION.
+            CLICK ON ORGANIZATION ICON TO VIEW FEEDBACKS FROM USERS!</h1>

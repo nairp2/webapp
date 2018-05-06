@@ -1,11 +1,12 @@
+<!-- Partial file that displays the form for sending email-->
 <%= form_for([@feedback, @feedback.comments.build]) do |f| %>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :restaurant_suggestion %>
     <%= f.text_area :content %>
   </div>
 
   <div class="actions">
-    <%= f.submit :Send_email %>
+    <%= f.submit :Send_email, class: 'btn btn-mini btn-success btn-lg' %>
   </div>
 <% end %>

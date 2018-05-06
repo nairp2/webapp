@@ -1,5 +1,6 @@
+<!-- This accesses _form.html.eb to display the page for user feedback-->
 <h1>New Feedback</h1>
 
 <%= render 'form', feedback: @feedback %>
 
-<%= link_to 'Back', feedbacks_path %>
+<%= link_to 'Back', feedbacks_path, class: 'btn btn-mini btn-info btn-md' %>

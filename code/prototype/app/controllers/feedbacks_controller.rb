@@ -1,3 +1,7 @@
+=begin
+Filename: feedbacks_controller.rb
+Description: This is the feedback controller. This is where the database for the feedbacks where the user can provide feedbacks that is stored in the database which can be accessed by organization and administration. Organization can click show button to access feedbacks and send suggestions to restaurant. Administrator can modify or delete feedbacks.
+=end
 class FeedbacksController < ApplicationController
   before_action :authenticate_user!
   before_action :set_feedback, only: [:show, :edit, :update, :destroy]
@@ -74,7 +78,7 @@ class FeedbacksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def feedback_params
+    #params.require(:feedback).permit(:title, :content, :user_id)
     params.require(:feedback).permit(:title, :content, :user_id)
-    #params.require(:feedback).permit(:food_order, :food_waste, :user_id)
     end
 end
